@@ -2,8 +2,8 @@
   "meta": {
     "date_label": "THU · 18 JUN 2026",
     "time_label": "1:00 PM IST",
-    "story_count": 20,
-    "generated_at": "2026-06-18T17:52:28+05:30"
+    "story_count": 29,
+    "generated_at": "2026-06-18T18:40:08+05:30"
   },
   "sections": [
     {
@@ -12,10 +12,10 @@
       "stories": [
         {
           "kicker": "IG format · Global",
-          "headline": "The feed is letting the comments referee",
+          "headline": "The trends are all audio-led and quietly confessional",
           "body": [
-            "The format still climbing after two weeks is <strong>\"Seeing if the Algorithm Prefers\"</strong> — one Reel pits a high-effort edit against a deadpan static shot and lets the comments vote on which the algorithm rewards. Engagement-bait that's at least honest about being engagement-bait.",
-            "Running alongside: the <strong>\"I Am Home\"</strong> trend set to Michael Jackson's \"Beat It\" (revived by the new MJ biopic), where people walk into their real sanctuary — the gym, the café, the edit bay — and the <strong>\"I Have Therapy\"</strong> POV cut. The month's throughline is audio-driven, self-aware, lightly confessional."
+            "Two formats are doing the heavy lifting this week. <strong>\"Seeing if the Algorithm Prefers\"</strong> pits a high-effort edit against a deadpan static shot in the same Reel and lets the comments vote on which one the feed rewards — engagement-bait that's at least honest about it. Running alongside, the <strong>\"I Am Home\"</strong> strut set to Michael Jackson's \"Beat It\" (revived by the new biopic), where people walk into their real sanctuary — the gym, the café, the edit bay — like they're finally home.",
+            "Underneath those: the <strong>\"I Have Therapy\"</strong> POV cut and a two-person walk where both people lip-sync the same verse straight down the lens. The month's throughline is self-aware and lightly confessional — the bit <em>is</em> the honesty."
           ],
           "caveat": "⚠ From third-party trend trackers, not a live Instagram pull — these run a few days behind real-time.",
           "linkout": {
@@ -24,13 +24,32 @@
           }
         },
         {
+          "kicker": "IG format · India",
+          "headline": "India's brands found the multi-character debate",
+          "body": [
+            "The format spreading fastest in India is the <strong>multi-character debate</strong> — one creator playing three personas arguing over the same product. Beauty brand Minimalist uses it to handle price objections: one persona balks at the cost, one explains the ingredient, one shows the result, all inside fifteen seconds.",
+            "The other reliable engine is a trending Bollywood beat stapled to a product drop — Zomato and Nykaa routinely clear a million views inside two days that way. India is the platform's biggest Reels audience by a distance, and trending audio is still the single largest lever for landing in Explore."
+          ],
+          "caveat": "⚠ Tracker data — a few days behind what's actually spiking on the app."
+        },
+        {
+          "kicker": "IG topics · Global",
+          "headline": "Polished-but-empty is finally losing",
+          "body": [
+            "The clearest shift this month is what's <em>not</em> working: glossy, say-nothing posts are sliding, while founder-led clips, longer carousels, behind-the-scenes, and plain Instagram SEO are climbing. The breakouts are almost boringly useful — simple infographics, screen recordings, question prompts, hyper-specific POVs you understand instantly without sound.",
+            "It rewards the thing you'd want anyway: say something concrete, fast, in a format that's easy to grasp."
+          ],
+          "caveat": "⚠ Tracker data — directional, not a live platform pull."
+        },
+        {
           "kicker": "Trending audio",
           "headline": "What's soundtracking Reels right now",
           "mini": [
             "<b>\"Game Time\" — Future &amp; Tyla</b> — the FIFA World Cup 2026 anthem; all over sports edits, gym and travel reels",
+            "<b>Michael Jackson — \"Beat It\"</b> — powering the \"I Am Home\" strut, riding the new biopic",
             "<b>Justin Bieber — \"DAISIES\"</b> — chill and pleasant; pinned to cooking, cozy travel and outfit checks",
             "<b>Tyler, The Creator — \"Ring Ring Ring\"</b> — retro-funk energy carrying creative edits",
-            "<b>Justin Bieber — \"EVERYTHING HALLELUJAH\"</b> — still dominating brand-friendly listing Reels"
+            "<b>Leona Lewis — \"Bleeding Love\"</b> — the go-to for confessional lip-syncs"
           ],
           "caveat": "⚠ Tracker data — a few days behind what's actually spiking on the app.",
           "linkout": {
@@ -40,12 +59,20 @@
         },
         {
           "kicker": "Twitter · Global",
-          "headline": "Sport runs the board — and the World Cup is everywhere",
+          "headline": "Football and the Middle East split the board",
           "body": [
-            "Mid-June's X board is mostly sport: the <strong>FIFA World Cup 2026</strong> ramping up across North America, plus Jannik Sinner, the F1 Barcelona GP, a UFC result, and the perennial Messi-vs-Ronaldo noise. Around the edges — Milan Fashion Week and AI chatter (<strong>#AIAgent</strong>).",
-            "X now weighs <strong>rate of growth</strong> over raw volume, so a fast-spiking topic can crest the board on a fraction of the posts of a slower one."
+            "Mid-June's X is two stories. One is sport: the <strong>FIFA World Cup 2026</strong> across North America, plus the perennial Ronaldo–Messi noise and club football. The other is geopolitics — a sharp <strong>Israel–Iran</strong> escalation in early June (missile barrages, retaliatory strikes, a shaky pause brokered with U.S. pressure) kept the region near the top for days.",
+            "X still weighs <strong>rate of growth</strong> over raw volume, so a fast-spiking topic can crest the board on a fraction of the posts of a slower one."
           ],
           "caveat": "⚠ Reported by trend trackers, not a live platform pull — X restricts its data, so this runs slightly behind real-time."
+        },
+        {
+          "kicker": "Twitter · India",
+          "headline": "Cricket, football, and a history lesson",
+          "body": [
+            "India's board mixes the predictable and the odd: <strong>#INDvsAFG</strong> cricket, <strong>Ronaldo</strong> and Portugal spilling over from the global football churn, <strong>NEET UG 2026</strong> as results season bites, and — more unusually — \"Flying Sikh\" and \"First War of Independence\" trending together, the kind of history-anniversary spike X India does well."
+          ],
+          "caveat": "⚠ Tracker data, not a live pull — runs a few days behind."
         }
       ]
     },
@@ -54,11 +81,19 @@
       "title": "Cameras & Gear",
       "stories": [
         {
+          "kicker": "Sony · launched",
+          "headline": "Sony's A7R VI puts a stacked 66.8MP sensor in a video body too",
+          "body": [
+            "Announced May 13 and shipping this month, the <strong>A7R VI</strong> is the first R-series to go fully <strong>stacked</strong>: ~66.8MP, 30fps bursts, and — the part that matters for motion — internal <strong>8K</strong> (8K30 with a mild 1.2x crop, uncropped 4K120 from 5K oversampling) and a claimed <strong>16 stops</strong> of dynamic range. $4,499 body-only.",
+            "For an S-Log and grading workflow that's a lot of latitude: oversampled 4K plus the wider DR means cleaner shadows to lift and more room before highlights clip. There's also a new Dual Gain video mode for low noise, though it's pinned to 4K30 at ISO 400. DPReview's verdict: stunning image quality, not quite the do-everything body the spec sheet implies."
+          ]
+        },
+        {
           "kicker": "Canon · launched",
           "headline": "Canon's EOS R6 V goes all-in on video — 7K, open gate, RAW",
           "body": [
-            "Announced May 13, the <strong>EOS R6 V</strong> is Canon's most video-forward R6 yet: 7K 60p, open-gate capture, internal RAW and reworked IBIS — aimed squarely at the solo shooter who'd otherwise reach for a Sony FX2 / ZV-E1. For an S-Log and grading workflow the headline is open gate plus RAW: more sensor to reframe and regrade, fewer compromises baked in at capture.",
-            "The honest caveat from early hands-on is heat management on the longest 7K modes — worth watching. Gordon Laing's first-look digs into where it holds up and where it doesn't."
+            "The <strong>EOS R6 V</strong> is Canon's most video-forward R6 yet: 7K 60p, open-gate capture, internal RAW and reworked IBIS — aimed at the solo shooter who'd otherwise reach for a Sony FX2 / ZV-E1. For an S-Log-style grade the headline is open gate plus RAW: more sensor to reframe and regrade, fewer compromises baked in at capture.",
+            "The honest caveat from early hands-on is heat on the longest 7K modes — it drops the viewfinder for active cooling. Gordon Laing's first-look digs into where it holds up and where it doesn't."
           ],
           "video": {
             "id": "5BCGrCtoJy0",
@@ -69,25 +104,33 @@
         },
         {
           "kicker": "Canon · lens",
-          "headline": "Canon's first L-series power-zoom lands with the R6 V",
+          "headline": "Canon's first L-series power-zoom ships with the R6 V",
           "body": [
-            "Launched beside the R6 V, the <strong>RF 20-50mm F4 L IS USM PZ</strong> is Canon's first L-series lens with a built-in <strong>power zoom</strong> — a motorized, smooth, repeatable zoom that's a video feature first and a stills one second. Constant f/4, ultra-wide to standard.",
-            "Why it matters for your work: power zoom plus Canon's focus-breathing correction is the kind of thing that makes a slow push-in on a gimbal read as deliberate instead of jittery."
+            "The <strong>RF 20-50mm F4 L IS USM PZ</strong> is Canon's first L lens with a motorized <strong>power zoom</strong> — smooth, repeatable, a video feature first and a stills one second. Constant f/4, ultra-wide to standard.",
+            "Paired with Canon's focus-breathing correction, it's the kind of glass that makes a slow push-in on a gimbal read as deliberate instead of jittery."
           ]
         },
         {
           "kicker": "Leica · imminent",
-          "headline": "A Leica SL3-P looks days away",
+          "headline": "Leica's SL3-P — and two new SL lenses — are days away",
           "body": [
-            "Rumor traffic points to a <strong>Leica SL3-P</strong> announcement around June 22–25 — likely a stripped, blacked-out 'P' variant of the SL3 in the usual Leica vein. Niche and pricey, but the L-mount it shares with Panasonic and Sigma keeps it relevant if you live in that ecosystem."
+            "Leica Rumors now points to a cluster of <strong>SL3-P</strong> announcements for the back half of June: a ~44MP L-mount body slotting between the 24MP SL3-S and 60MP SL3 (around €5,900), reportedly built on Panasonic's S1RII rather than either existing SL3. Alongside it, a <strong>Summilux-SL 50mm f/1.4</strong> and an <strong>SL 100mm f/2.8 macro</strong>.",
+            "Niche and pricey, but the shared L-mount keeps it relevant if you already live in the Panasonic / Sigma / Leica ecosystem."
           ],
-          "caveat": "Unannounced — based on rumor-site chatter, so treat the dates as soft."
+          "caveat": "Unannounced — based on rumor-site chatter, so treat the dates and specs as soft."
         },
         {
           "kicker": "Viltrox · launched",
           "headline": "Viltrox's tiny 28mm f/4.5 AF pancake is official",
           "body": [
-            "Viltrox launched a genuinely pocketable <strong>28mm f/4.5 autofocus pancake</strong> — the kind of cheap, light prime that turns a full-frame body into a grab-and-go. Not a fast lens, but for a flat, packable everyday or B-roll setup it's a fun, low-stakes buy."
+            "A genuinely pocketable <strong>28mm f/4.5 autofocus pancake</strong> — the kind of cheap, light prime that turns a full-frame body into a grab-and-go. Not a fast lens, but for a flat, packable everyday or B-roll setup it's a fun, low-stakes buy."
+          ]
+        },
+        {
+          "kicker": "Cosina · lens",
+          "headline": "A Voigtländer Nokton Classic 35mm f/1.4 is coming to Nikon Z",
+          "body": [
+            "Cosina has dated the manual-focus <strong>Nokton Classic 35mm f/1.4</strong> for Nikon Z to July — a small, characterful fast prime for people who actually want the rendering quirks rather than clinical perfection. A nice antidote to the spec-sheet arms race higher up this list."
           ]
         }
       ]
@@ -97,23 +140,25 @@
       "title": "Gaming",
       "stories": [
         {
-          "kicker": "Port · Jun 3",
-          "headline": "FF7 Rebirth is finally on Switch 2 (and Xbox)",
+          "kicker": "Reveal · Summer Game Fest",
+          "headline": "Final Fantasy VII Revelation closes out the trilogy",
           "body": [
-            "After a year as a PlayStation exclusive, <strong>Final Fantasy VII Rebirth</strong> landed on Switch 2 and Xbox on June 3 — a real test of the new Nintendo hardware's ceiling, and a Play Anywhere title on the Xbox side. There's a free demo whose save carries into the full game."
-          ],
-          "video": {
-            "id": "vKbIQTq2EUU",
-            "label": "Watch the launch trailer",
-            "duration": "1:23"
-          },
-          "image": "https://img.youtube.com/vi/vKbIQTq2EUU/maxresdefault.jpg"
+            "Summer Game Fest (June 5) opened with the big one: <strong>Final Fantasy VII Revelation</strong>, the third and final chapter of the Remake trilogy. The reveal leaned on new playable time with <strong>Cid and Vincent Valentine</strong> — the two party members fans have waited the whole trilogy to actually control.",
+            "No firm date yet, but this is the run that has to stick the landing on a story people have followed since 1997."
+          ]
+        },
+        {
+          "kicker": "Reveal · Summer Game Fest",
+          "headline": "Resident Evil: Veronica gets a full third-person remake",
+          "body": [
+            "Capcom is remaking <strong>Code: Veronica</strong> — long the fan-requested gap in the remake run — as <strong>Resident Evil: Veronica</strong>, a proper third-person entry from the team behind the excellent RE2 and RE4 remakes. On that track record, it's the SGF reveal most likely to actually be great."
+          ]
         },
         {
           "kicker": "Release · Jun 25",
           "headline": "Star Fox returns — exclusive to Switch 2",
           "body": [
-            "Nintendo is bringing <strong>Star Fox</strong> back as a Switch 2 exclusive on June 25 — a remake with a fresh prologue (the fate of Fox's father, James McCloud) shown at the June 9 Direct. For a series that's been dormant for years, this is the month's big swing."
+            "Nintendo brings <strong>Star Fox</strong> back as a Switch 2 exclusive on June 25 — a remake with a fresh prologue (the fate of Fox's father, James McCloud) shown at the June 9 Direct. For a series dormant for years, this is the month's big swing."
           ],
           "video": {
             "id": "cWJR_d9gBZ4",
@@ -123,26 +168,45 @@
           "image": "https://img.youtube.com/vi/cWJR_d9gBZ4/maxresdefault.jpg"
         },
         {
-          "kicker": "Release · Jun 4",
-          "headline": "The 7th Guest gets a full remake",
+          "kicker": "Port · Jun 3",
+          "headline": "FF7 Rebirth is finally on Switch 2 (and Xbox)",
           "body": [
-            "The 1993 FMV horror-puzzle landmark — the game that once sold people CD-ROM drives — returns as a <strong>full remake</strong> across PC and consoles. More a curiosity than a must-play, but a neat one if you care about where interactive media came from."
-          ]
-        },
-        {
-          "kicker": "Release · this month",
-          "headline": "The Gothic 1 Remake arrives for the faithful",
-          "body": [
-            "The cult 2001 German RPG <strong>Gothic</strong> gets a ground-up remake — janky-but-beloved source material rebuilt with modern systems. Long-awaited by the people who've been asking for two decades."
-          ]
+            "After a year as a PlayStation exclusive, <strong>Final Fantasy VII Rebirth</strong> landed on Switch 2 and Xbox on June 3 — a real test of the new Nintendo hardware's ceiling, and a Play Anywhere title on the Xbox side. The free demo's save carries into the full game."
+          ],
+          "video": {
+            "id": "vKbIQTq2EUU",
+            "label": "Watch the launch trailer",
+            "duration": "1:23"
+          },
+          "image": "https://img.youtube.com/vi/vKbIQTq2EUU/maxresdefault.jpg"
         },
         {
           "kicker": "Hardware · leak",
           "headline": "Nvidia's RTX 50 SUPER refresh is 'back on track'",
           "body": [
-            "After COMPUTEX 2026 (DLSS 4.5 and the RTX Spark superchip), leakers say the long-delayed <strong>RTX 50 SUPER</strong> refresh is back on, possibly with a new SKU. The render-relevant angle for you: more VRAM and CUDA throughput is exactly what shortens DaVinci Resolve renders and DCTL-heavy grades — though June GPU pricing is still ugly."
+            "After COMPUTEX 2026, leakers say the long-delayed <strong>RTX 50 SUPER</strong> refresh is back on, possibly with a new SKU. The render-relevant angle for your work: more VRAM and CUDA throughput is exactly what shortens DaVinci Resolve renders and DCTL-heavy grades — though mid-2026 GPU pricing is still ugly."
           ],
           "caveat": "Leak / rumor — specs and timing aren't official yet."
+        },
+        {
+          "kicker": "Also out in June",
+          "headline": "The rest of the month's release slate",
+          "mini": [
+            "<b>Hell Let Loose: Vietnam</b> — the hardcore WWII shooter moves to the jungle, with new weapons and terrain",
+            "<b>Gothic 1 Remake</b> — the janky-but-beloved 2001 RPG rebuilt ground-up for the faithful",
+            "<b>The 7th Guest (remake)</b> — the CD-ROM-era FMV puzzle landmark, now beyond VR onto PC and consoles",
+            "<b>Dead or Alive: Last Round</b> — a 30th-anniversary re-up with ~30 fighters and a new photo mode",
+            "<b>EA Sports UFC 6</b> — the long gap between UFC games finally ends"
+          ]
+        },
+        {
+          "kicker": "Also revealed",
+          "headline": "More from the showcase floor",
+          "mini": [
+            "<b>Until Dawn 2</b> — the teen-slasher returns, from Liverpool's Firesprite",
+            "<b>Alien: Isolation 2</b> — a sequel to the one genuinely terrifying Alien game",
+            "<b>Stranger Than Heaven</b> — Ryu Ga Gotoku's next, dated January 15, 2027"
+          ]
         }
       ]
     },
@@ -151,10 +215,18 @@
       "title": "Cinema",
       "stories": [
         {
+          "kicker": "Global · now playing",
+          "headline": "Spielberg's Disclosure Day is the year's biggest original swing",
+          "body": [
+            "<strong>Disclosure Day</strong> — Spielberg directing a David Koepp sci-fi script, with Emily Blunt, Josh O'Connor, Colin Firth and Colman Domingo — opened June 12 to <strong>$93M worldwide</strong> and the biggest opening weekend of his career for an <em>original</em> film: no franchise, no pre-existing IP. It's already past $98M and climbing.",
+            "In a summer wall-to-wall with sequels, the most interesting craft story is a non-franchise original topping the global chart. Worth catching on the biggest screen you can find."
+          ]
+        },
+        {
           "kicker": "Global · opens Jun 19",
           "headline": "Toy Story 5 opens tomorrow",
           "body": [
-            "Pixar's <strong>Toy Story 5</strong> hits theaters June 19, predicted to top the month's box office. The premise leans poignant — the toys versus kids who'd rather have a screen — and a redesigned Woody has fans arguing. Whatever you make of the franchise, it's a craft benchmark worth studying frame by frame."
+            "Pixar's <strong>Toy Story 5</strong> hits theaters June 19. The premise leans poignant — the toys versus kids who'd rather have a screen — and a redesigned Woody has fans arguing. Whatever you make of the franchise, it's a craft benchmark worth studying frame by frame."
           ],
           "video": {
             "id": "NBS_FvKOl1Y",
@@ -178,9 +250,9 @@
         },
         {
           "kicker": "India · box office leader",
-          "headline": "Peddi (Telugu) is carrying Indian cinema — ₹226 Cr",
+          "headline": "Peddi (Telugu) is carrying Indian cinema — ₹300 Cr+ worldwide",
           "body": [
-            "Telugu cinema is doing the heavy lifting again — about <strong>61% of June's all-India collections</strong>, led by Buchi Babu Sana's <strong>Peddi</strong> (Ram Charan, Janhvi Kapoor, an A. R. Rahman score) at roughly ₹226 Cr net since its June 4 opening. The clearest signal of where the commercial energy sits right now."
+            "Telugu cinema is doing the heavy lifting again — about <strong>61% of June's all-India collections</strong>, led by Buchi Babu Sana's <strong>Peddi</strong> (Ram Charan, Janhvi Kapoor, an A. R. Rahman score). It's crossed <strong>₹300 Cr worldwide</strong> since its June 4 opening and is now the biggest South Indian grosser of 2026 so far. The clearest signal of where the commercial energy sits right now."
           ],
           "video": {
             "id": "sF2dj7ycZvA",
@@ -190,10 +262,17 @@
           "image": "https://img.youtube.com/vi/sF2dj7ycZvA/maxresdefault.jpg"
         },
         {
-          "kicker": "India · mixed results",
-          "headline": "Hindi's June: a modest hit and a soft horror open",
+          "kicker": "India · opens Jun 19",
+          "headline": "Cocktail 2 reopens a Bollywood favourite tomorrow",
           "body": [
-            "Hindi results stayed uneven: <em>Hai Jawani Toh Ishq Hona Hai</em> managed about ₹49 Cr, while the horror release <em>Haunted 3D: Echoes of the Past</em> opened soft near ₹15 Cr. The genuinely big Hindi swings of the year are still ahead."
+            "<strong>Cocktail 2</strong> arrives June 19, a long-in-the-works follow-up to the 2012 film. It's the more talked-about of this week's Hindi releases — a test of whether the franchise nostalgia still pulls in a year where Telugu has been setting the pace."
+          ]
+        },
+        {
+          "kicker": "India · what's next",
+          "headline": "Hindi's big June bet is Welcome to the Jungle",
+          "body": [
+            "The Hindi slate has been uneven — <em>Hai Jawani Toh Ishq Hona Hai</em> managed about ₹49 Cr, the horror release <em>Haunted 3D</em> opened soft — so the month's real swing is <strong>Welcome to the Jungle</strong> (the third <em>Welcome</em>), locked for June 26. After a strong start to the year for Hindi tentpoles, it's the big ensemble comedy that has to bring the crowds."
           ]
         }
       ]
@@ -204,20 +283,15 @@
       "stories": [
         {
           "kicker": "The deep dive · ~3 min",
-          "headline": "The animal with sixteen kinds of eye — that sees colour worse than you",
+          "headline": "The robin that may navigate by a quantum trick in its eye",
           "deep": true,
-          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Odontodactylus_scyllarus1.jpg/1280px-Odontodactylus_scyllarus1.jpg",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Erithacus_rubecula_with_cocked_head.jpg/1280px-Erithacus_rubecula_with_cocked_head.jpg",
           "body": [
-            "The peacock mantis shrimp is a reef thug with the most elaborate eyes in nature. Where you have <strong>three</strong> colour receptors, it has up to <strong>twelve</strong> — sampling from deep ultraviolet to far red — plus the only known biological hardware for seeing circular-polarised light. For decades this read as an obvious story: more receptors, superhuman colour vision.",
-            "Then someone actually tested it. In a 2014 experiment, researchers trained the shrimp to pick between coloured targets and found they're <strong>worse</strong> than humans at telling close colours apart — they fumbled wavelengths only tens of nanometres apart that we separate with ease. All that machinery does <em>not</em> buy fine colour discrimination.",
-            "So what are twelve receptors <em>for</em>? The leading idea: the shrimp doesn't <em>compare</em> channels the way our brain does (weighing red against green to compute a hue). Each receptor is a blunt yes/no detector, and the animal reads colour as a <strong>pattern of which channels fire</strong> — a quick barcode scan rather than careful arithmetic. Speed over precision, in a creature that throws one of the fastest strikes in the animal kingdom.",
-            "The humble part: the mechanism still isn't settled — newer work keeps complicating it, and 'why so many receptors' remains genuinely open. It's a clean lesson in how a system that looks maximally powerful can be quietly optimised for something other than what you assumed."
-          ],
-          "video": {
-            "id": "HLWrXuDDvZI",
-            "label": "Watch the explainer",
-            "duration": "1:12"
-          }
+            "A European robin can find its migratory heading on an overcast night with no stars and no landmarks — nothing but the Earth's <strong>magnetic field</strong>, a field so faint (around 50 microtesla) it barely troubles a compass needle. The leading explanation for how a warm, wet, living animal detects it is genuinely strange: a <strong>quantum</strong> one.",
+            "It starts in the eye. Blue light hits a protein called <strong>cryptochrome</strong> (Cry4a in robins) and kicks an electron across the molecule, leaving two unpaired electrons — a radical pair. The spins of those electrons are linked, flickering between aligned and opposed states, and the Earth's magnetic field subtly tips the balance of how often each state occurs. That changes the chemistry the protein produces — which the bird may read as a faint visual signal laid over what it sees. A compass you look <em>through</em>.",
+            "Why it matters: this is one of the strongest candidates for <strong>quantum biology</strong> — a living system seemingly exploiting quantum spin effects at body temperature, where physicists would expect that delicate coherence to be wiped out almost instantly. The tell is that the sense is light-dependent and can be switched off by extremely weak radio-frequency fields, exactly as a radical-pair mechanism predicts and a simple iron-based sensor would not.",
+            "The humble caveat: it isn't settled. Cry4a does make magnetically sensitive radical pairs <em>in a test tube</em>, and 2025 work keeps refining which variants matter — but nobody has yet traced the full chain inside a living, flying bird, and an older iron-particle (magnetite) hypothesis hasn't been fully ruled out. It's a beautiful, unfinished story about an animal doing physics we're still catching up to."
+          ]
         }
       ]
     },
@@ -226,28 +300,22 @@
       "title": "Psychology",
       "stories": [
         {
-          "kicker": "Interesting · attention",
-          "headline": "You can stare straight at a gorilla and not see it",
+          "kicker": "Interesting · perception",
+          "headline": "Your eyes can overrule your ears mid-syllable",
           "body": [
-            "Count the passes between the players in white, and about <strong>half of viewers miss a person in a gorilla suit</strong> who strolls into the middle of the game, thumps their chest, and walks off. It isn't a trick of the eyes — the gorilla lands on your retina perfectly well. Your attention, busy with the count, simply never promotes it to awareness.",
-            "The lesson isn't 'people are dim,' it's that <strong>seeing is not passive recording</strong> — attention decides what becomes conscious, and you get no warning about what it dropped. The unsettling corollary: you're sure you'd have spotted it, and that confidence is exactly the part the effect predicts will be wrong."
+            "Play someone the sound \"ba\" while showing a face mouthing \"ga,\" and most people hear a third thing entirely — \"da\" — that's in neither the audio nor the video. Close your eyes and it snaps back to \"ba.\" Open them and your hearing changes again. This is the <strong>McGurk effect</strong>, and it's hard to un-feel even once you know the trick.",
+            "The lesson isn't that hearing is unreliable — it's that perception is a <strong>fusion</strong>. Your brain doesn't keep the senses in separate lanes; it blends lips and sound into a single best guess and hands you the result as if it were raw fact. For anyone who works in picture and audio, it's a sharp reminder that what an audience 'hears' is partly what your edit lets them see."
           ],
-          "caveat": "Inattentional blindness (Simons &amp; Chabris) — robust and widely replicated. The original demo is below.",
-          "video": {
-            "id": "vJG698U2Mvo",
-            "label": "Try the original test",
-            "duration": "1:22"
-          },
-          "image": "https://img.youtube.com/vi/vJG698U2Mvo/maxresdefault.jpg"
+          "caveat": "The McGurk effect — robust and much-replicated, though how strongly you get it varies by language and by person."
         },
         {
           "kicker": "Useful · apply today",
-          "headline": "Space your practice — don't mass it",
+          "headline": "Beat procrastination by pre-deciding the 'when and where'",
           "body": [
-            "One of the most replicated findings in all of psychology, and most people do the opposite of it. Cramming a skill into one long session feels productive because it feels <em>fluent in the moment</em> — but that fluency fades fast. <strong>Spacing the same total practice across days</strong> produces dramatically better long-term retention, even though it feels slower and harder while you're doing it.",
-            "The mechanism: each time you let a little forgetting set in and then reload the skill, you force a costlier retrieval — and that effort is what consolidates it. So for a new DCTL trick or an unfamiliar Resolve panel, don't grind three hours once; touch it for twenty minutes across a week, deliberately after you've half-forgotten."
+            "Vague goals (\"I'll learn that Resolve panel this week\") lose to a tiny change of format: an <strong>if-then plan</strong>. \"<em>When</em> I sit down after lunch tomorrow, <em>then</em> I'll spend twenty minutes on the new DCTL node.\" Naming the specific cue — a time, a place, a trigger — reliably beats good intentions, across decades of studies.",
+            "The mechanism is delegation. By deciding the cue in advance, you hand the start-up decision to your environment instead of relying on willpower in the moment — so when the cue arrives, acting feels almost automatic and there's no fresh negotiation with yourself. Cheap to set up, and it works best for exactly the tasks you keep putting off."
           ],
-          "caveat": "The spacing / distributed-practice effect — among the largest and most robust effects in learning research."
+          "caveat": "Implementation intentions (Gollwitzer) — among the better-replicated tools in behaviour-change research, with a solid meta-analytic effect."
         }
       ]
     },
@@ -257,20 +325,14 @@
       "stories": [
         {
           "kicker": "The question · sit with it",
-          "headline": "Would you plug into a machine that feels like a perfect life?",
+          "headline": "If a machine rebuilds you atom-for-atom on Mars, did you travel — or die?",
           "deep": true,
           "body": [
-            "Robert Nozick asks you to imagine a machine that can give you <strong>any experience you want</strong> — write the novel, win the love, climb the mountain — all indistinguishable from the real thing, for the rest of your life. You float in a tank; neuroscientists feed your brain the script. From the inside it is a wonderful life. <strong>Do you plug in?</strong>",
-            "Most people recoil — and that recoil is the argument. If pleasure and good experiences were <em>all</em> that mattered, plugging in would be a no-brainer. The hesitation says we want <strong>to actually do things, not merely have the experience of doing them</strong>; we want our beliefs to be true and our achievements to be real, not authored by a machine.",
-            "The tension doesn't resolve cleanly. Push back and it bites: aren't you already trusting your senses about a world you can't step outside of? And the hedonist has replies — maybe the recoil is just status-quo bias, or fear of the unknown. Nozick's point isn't to trap you; it's to surface that 'a good life' seems to contain <em>something beyond how it feels from the inside</em>.",
-            "It's not abstract for you. An infinite feed is a low-resolution experience machine — engineered to feel good from the inside while quietly authoring your attention. The whole reason this reader ends is a bet that contact with the real thing beats a perfect stream of the synthetic."
-          ],
-          "video": {
-            "id": "HhisGOilMR4",
-            "label": "Watch the explainer",
-            "duration": "8:38"
-          },
-          "image": "https://img.youtube.com/vi/HhisGOilMR4/maxresdefault.jpg"
+            "Derek Parfit asks you to step into a teletransporter. It scans every cell, records the exact arrangement, and <strong>destroys</strong> your body on Earth. A moment later an identical body is assembled on Mars from new matter — same memories, same personality, convinced it just walked in. From the inside, the Mars person feels like you, continued. <strong>Did you survive?</strong>",
+            "Say yes, and a small tweak breaks it. In the branch-line version the scanner <em>doesn't</em> destroy the original — now there are two of you, and they can't both be you. So say the real you is the one on Earth, about to die while a copy walks around on Mars wearing your life. The thing you wanted to preserve seems to slip through your fingers exactly when a perfect copy exists.",
+            "Parfit's move is radical: maybe the question \"is that <em>really</em> me?\" has no deep answer — and, more unsettling, maybe it <strong>doesn't matter</strong>. What we actually care about, he argues, is <strong>psychological continuity</strong> — memories, intentions, character carrying forward — and that's a matter of degree, not the all-or-nothing 'same self' we picture guarding.",
+            "Sit with it and it turns inward. The you of ten years ago arguably shares less with you now than the Mars copy would on day one. If your identity across a lifetime is already a rope of overlapping strands rather than one unbroken thread, the teleporter isn't posing a sci-fi puzzle — it's exposing a question you've been quietly answering your whole life."
+          ]
         }
       ]
     }
