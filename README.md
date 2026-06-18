@@ -50,9 +50,14 @@ Validation **fails loudly** (non-zero exit) if a category is over cap, out of
 order, or a story is missing required fields — so a scheduled run stops instead of
 publishing a broken edition.
 
-## Hosting — GitHub Pages (one-time setup)
+## Hosting — GitHub Pages
 
-1. Create an empty repo on GitHub, e.g. `the-anti-feed` (public).
+**Live at: https://shekarsushruth.github.io/anti-feed/** — open this on your phone anytime.
+
+Repo: https://github.com/shekarsushruth/anti-feed (public, Pages serving from `main` / root).
+Setup is already done; the steps below are kept for reference or re-creating it elsewhere.
+
+1. Create an empty repo on GitHub, e.g. `anti-feed` (public).
 2. From this folder:
    ```powershell
    git init
