@@ -92,10 +92,25 @@ whole pipeline. Delivery is just the refresh: the job overwrites `edition.json` 
 the hosted URL, and you see the new edition next time you open the page. No email,
 no push, no notification.
 
+### Push auth (for the Cowork sandbox)
+
+`publish.ps1` pushes with a GitHub token instead of relying on interactive
+credentials, so it works from a headless sandbox. Provide a fine-grained PAT scoped
+to this repo with **Contents: write** in one of two ways (env var wins):
+
+1. Set the `GITHUB_TOKEN` environment variable in the sandbox, **or**
+2. Put it in a local `.env` file (gitignored — never committed): `GITHUB_TOKEN=...`
+
+The script base64-encodes it into a one-shot `http.extraheader` at push time, so the
+token is never written to `.git/config`, the remote URL, or any committed file. If no
+token is found it falls back to ambient git credentials. **Rotate the PAT if it's ever
+shared in plaintext** (e.g. pasted into a chat) — then just update the env var / `.env`.
+
 ## Notes
 
-- **Images:** if a story's `image` URL fails to load, the shell falls back to the
-  labeled placeholder automatically — nothing breaks.
+- **Images:** priority is curated free image (Wikimedia/Openverse) → the story's
+  YouTube thumbnail → none. A card either shows a real image or is clean text-only;
+  there's no grey fallback box. A failed image just drops its slot.
 - **Videos:** tap-to-play only, one per story, never autoplay. Supply the 11-char
   YouTube id in `video.id`. An empty id shows a "loads on tap" placeholder.
 - **IG / Twitter trends** come from third-party trackers and run a few days behind;
