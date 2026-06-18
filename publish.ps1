@@ -11,7 +11,7 @@ if (-not (Test-Path ".git")) {
     exit 1
 }
 
-git add index.html edition.json
+git add index.html edition.json edition.js
 # Nothing staged => nothing to publish; exit quietly so the scheduler doesn't error.
 git diff --cached --quiet
 if ($LASTEXITCODE -eq 0) {

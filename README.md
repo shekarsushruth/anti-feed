@@ -20,8 +20,11 @@ The split is deliberate: the **shell** never changes, only the **content** refre
 
 ## Run it locally
 
-`index.html` fetches `edition.json`, so open it through a tiny web server (a
-`file://` open is blocked by the browser from fetching JSON):
+**Just double-click `index.html`.** When opened from disk (`file://`), the browser
+blocks `fetch()` of local files, so the app automatically falls back to `edition.js`
+(a JS twin of `edition.json` the finalizer writes) and renders normally.
+
+To preview exactly as hosted (over http), run a tiny server instead:
 
 ```powershell
 # from this folder

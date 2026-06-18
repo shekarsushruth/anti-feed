@@ -51,6 +51,23 @@ function istIso(d) {
          `T${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}+05:30`;
 }
 
+// Image policy (priority order, per story):
+//  1. a curated free image (Wikimedia/Openverse) set during research -> keep it (higher quality)
+//  2. else has a video -> image = that video's YouTube thumbnail (maxres; hqdefault fallback in app)
+//  3. else -> no image field, so the app renders a clean text-only card (no empty box)
+// Only the #2 derivation is deterministic, so it lives here; #1 is done during research (PIPELINE.md).
+function normalize(data) {
+  for (const sec of data.sections || []) {
+    for (const st of sec.stories || []) {
+      if (!st.image && st.video && st.video.id) {   // curated image wins; thumbnail only fills the gap
+        st.image = `https://img.youtube.com/vi/${st.video.id}/maxresdefault.jpg`;
+      }
+      delete st.media_label; // legacy field — the labeled fallback box no longer exists
+    }
+  }
+  return data;
+}
+
 function validate(data) {
   const errors = [], warnings = [];
   const sections = data.sections;
@@ -141,6 +158,8 @@ function main() {
     process.exit(2);
   }
 
+  normalize(data);
+
   const { errors, warnings } = validate(data);
   for (const w of warnings) console.error(`warn: ${w}`);
   if (errors.length) {
@@ -156,7 +175,11 @@ function main() {
 
   stamp(data);
   writeFileSync(args.out, JSON.stringify(data, null, 2) + "\n", "utf-8");
-  console.log(`Wrote ${args.out} — ${data.meta.date_label} · ${data.meta.story_count} stories`);
+  // JS twin so the app also renders when index.html is opened directly from disk (file://),
+  // where fetch() is blocked. The hosted site uses edition.json; this just keeps them in sync.
+  const jsOut = args.out.replace(/\.json$/, ".js");
+  writeFileSync(jsOut, "window.__EDITION__ = " + JSON.stringify(data) + ";\n", "utf-8");
+  console.log(`Wrote ${args.out} (+ ${jsOut}) — ${data.meta.date_label} · ${data.meta.story_count} stories`);
   console.log(summary(data));
 }
 

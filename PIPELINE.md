@@ -47,9 +47,18 @@ here" note rather than inventing filler.
 
 ## Step 3 — Add media where it genuinely helps
 
-- **Image per story where available** — a representative hosted image (movie poster,
-  product shot, game key art, relevant photo) as `image`. If none is solid, omit it;
-  the shell shows a labeled fallback from `media_label`. Always set `media_label`.
+- **Image policy — priority order, per story.** There is no grey fallback box anymore:
+  a card either shows a real image or has no image area at all (clean text-only).
+  1. **A real subject with a free/open image** (science, nature, a person, a place) →
+     set `image` to a **free-source** URL only: Wikimedia Commons first, then Openverse /
+     Wikipedia. No paid APIs, no copyrighted hotlinks (posters, product shots, key art).
+     Prefer a direct `upload.wikimedia.org/.../thumb/.../1280px-…` URL. A curated image
+     always wins — even when the card also has a video.
+  2. **Else, the story has a video →** leave `image` unset and the finalizer auto-fills it
+     with that video's YouTube thumbnail (`maxresdefault`, with an `hqdefault` runtime
+     fallback). This covers the cards with no free image (cameras, games, films).
+  3. **Neither** (abstract topics, trends, most psychology/philosophy concept cards, or no
+     free image found) → omit `image` entirely. The card renders clean, text-only.
 - **Video = tap-to-play, never autoplay.** One per story max, only where it adds info
   (trailer, review, explainer). Supply a real YouTube **video id** (the 11-char id,
   not a URL) in `video.id`. Leave `id` empty only if you couldn't find a good one —
@@ -87,8 +96,7 @@ Then publish (see README).
           "kicker": "IG format · Global",      // small uppercase label
           "headline": "…",                      // the hook (plain text)
           "deep": false,                        // true only for Rabbithole & Philosophy (dark card)
-          "media_label": "…",                   // fallback caption; always set when there's media
-          "image": "https://…",                 // optional representative image URL
+          "image": "https://…",                 // optional; omit for video stories (auto-filled) & text-only cards
           "body": [ "<p-html>", "…" ],          // paragraphs; inline <strong>/<em>/<b> allowed
           "caveat": "…",                        // optional small grey line (e.g. trend disclaimer)
           "mini": [ "<b>…</b> — …" ],            // optional ♪ list (used for trending audio)
