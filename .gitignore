@@ -5,6 +5,11 @@ anti-feed-build-brief.md
 draft.json
 *.draft.json
 
+# secrets — never commit (GitHub push token for the daily job)
+.env
+.env.*
+*.token
+
 # editor / OS noise
 .DS_Store
 Thumbs.db
