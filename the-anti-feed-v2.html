@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Anti-Feed — Daily Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2ECE0;--paper-2:#EAE2D2;--ink:#1F1B16;--ink-soft:#5C5246;
+    --ink-faint:#8B7F6E;--accent:#C0451B;--accent-deep:#9A340F;--line:#D6CCB8;
+    --gold:#B8893A;--radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:30px}
+  .wrap{max-width:700px;margin:0 auto;padding:0 20px}
+
+  header.mast{text-align:center;padding:46px 20px 28px;border-bottom:2px solid var(--ink);
+    max-width:700px;margin:0 auto}
+  .mast .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px}
+  .mast h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(44px,12vw,82px);
+    line-height:.9;letter-spacing:-.025em;font-optical-sizing:auto}
+  .mast h1 .the{display:block;font-size:.32em;letter-spacing:.18em;font-weight:500;
+    text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-style:normal}
+  .mast .tagline{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:15px;
+    color:var(--ink-soft);margin-top:16px}
+  .mast .dateline{display:flex;justify-content:center;gap:14px;align-items:center;margin-top:18px;
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;
+    color:var(--ink-faint);flex-wrap:wrap}
+  .mast .dot{width:4px;height:4px;border-radius:50%;background:var(--accent)}
+
+  .section-head{display:flex;align-items:baseline;gap:14px;margin:42px 0 2px}
+  .section-head .ix{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);
+    font-weight:500;flex-shrink:0}
+  .section-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink)}
+  .section-head .count{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--ink-faint)}
+  .section-head .rule{flex:1;height:1px;background:var(--line)}
+
+  .story{border-bottom:1px solid var(--line)}
+  .headline{width:100%;text-align:left;background:none;border:0;cursor:pointer;
+    padding:15px 4px;display:flex;gap:14px;align-items:flex-start;font-family:inherit;
+    color:inherit;transition:padding-left .2s ease}
+  .headline:hover{padding-left:9px}
+  .headline .num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint);
+    flex-shrink:0;margin-top:5px;width:22px}
+  .headline .htext{flex:1}
+  .headline .kicker{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--accent-deep);margin-bottom:4px;display:block}
+  .headline h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;line-height:1.22;
+    letter-spacing:-.01em;color:var(--ink)}
+  .headline .chev{flex-shrink:0;width:20px;height:20px;margin-top:5px;color:var(--ink-faint);
+    transition:transform .25s ease;display:flex;align-items:center;justify-content:center}
+  .headline .chev::after{content:"";width:7px;height:7px;border-right:1.5px solid currentColor;
+    border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-2px}
+  .story.open .chev{transform:rotate(180deg);color:var(--accent)}
+  .story.open .headline h3{color:var(--accent-deep)}
+
+  .detail{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .story.open .detail{max-height:1400px}
+  .detail-inner{padding:0 4px 22px 40px}
+  .detail .media{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+    background:linear-gradient(135deg,#ddd2bd,#cdbfa3);margin-bottom:14px}
+  .detail .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .media .fallback{position:absolute;inset:0;display:flex;align-items:flex-end;padding:15px;
+    background:radial-gradient(120% 100% at 0% 0%,rgba(192,69,27,.14),transparent 60%),
+    linear-gradient(135deg,#e0d4be,#c9ba9d)}
+  .media .fallback span{font-family:'Fraunces',serif;font-style:italic;font-size:12.5px;color:var(--ink-soft)}
+  .detail p{font-size:14.5px;color:var(--ink-soft);margin-bottom:9px}
+  .detail p strong{color:var(--ink);font-weight:600}
+  .detail .caveat{font-size:12.5px;color:var(--ink-faint);margin-top:2px}
+  .mini{list-style:none;margin-top:2px}
+  .mini li{font-size:14px;color:var(--ink-soft);padding:6px 0;display:flex;gap:9px;border-bottom:1px solid var(--line)}
+  .mini li:last-child{border-bottom:0}
+  .mini li b{color:var(--ink);font-weight:600}
+  .mini li::before{content:"♪";color:var(--accent);font-size:11px;flex-shrink:0;margin-top:3px}
+
+  .watch{margin-top:4px;display:inline-flex;align-items:center;gap:9px;padding:8px 14px 8px 11px;
+    background:transparent;border:1px solid var(--line);border-radius:999px;color:var(--ink);
+    font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;transition:.18s ease}
+  .watch:hover{border-color:var(--accent);color:var(--accent)}
+  .watch .tri{width:17px;height:17px;border-radius:50%;background:var(--accent);flex-shrink:0;
+    display:flex;align-items:center;justify-content:center}
+  .watch .tri::after{content:"";border-left:5px solid #fff;border-top:3.5px solid transparent;
+    border-bottom:3.5px solid transparent;margin-left:2px}
+  .watch .dur{color:var(--ink-faint);font-family:'IBM Plex Mono',monospace;font-size:10.5px}
+  .player{margin-top:12px;border-radius:10px;overflow:hidden;aspect-ratio:16/9;display:none}
+  .player.open{display:block}
+  .player iframe{width:100%;height:100%;border:0;display:block}
+  .linkout{margin-top:4px;display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-faint);
+    text-decoration:none;border-bottom:1px dashed var(--line);padding-bottom:2px}
+  .linkout:hover{color:var(--accent)}
+  .linkout::after{content:"↗"}
+
+  .story.deep .detail-inner .skin{background:var(--ink);border-radius:12px;padding:20px;margin-left:-4px}
+  .story.deep .skin p{color:#C9BEAC}
+  .story.deep .skin p strong{color:#F2ECE0}
+  .story.deep .skin .caveat{color:#8B7F6E}
+  .story.deep .skin .watch{border-color:#3d3426;color:#F2ECE0}
+  .story.deep .skin .watch .dur{color:#8B7F6E}
+
+  .ending{text-align:center;margin:58px auto 0;padding:46px 24px 8px;border-top:2px solid var(--ink);max-width:700px}
+  .ending .mark{font-family:'Fraunces',serif;font-size:32px;color:var(--accent);margin-bottom:16px}
+  .ending h4{font-family:'Fraunces',serif;font-weight:600;font-size:25px;letter-spacing:-.01em;margin-bottom:12px}
+  .ending p{color:var(--ink-soft);font-size:15px;max-width:44ch;margin:0 auto 6px}
+  .ending .next{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;
+    color:var(--ink-faint);margin-top:20px;text-transform:uppercase}
+
+  @media (max-width:520px){.detail-inner{padding-left:24px}.headline h3{font-size:17px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="eyebrow">The Daily Edition</div>
+  <h1><span class="the">The</span>Anti-Feed</h1>
+  <div class="tagline">read it like a paper. open what pulls you. then it ends.</div>
+  <div class="dateline">
+    <span>TUE · 16 JUN 2026</span><span class="dot"></span>
+    <span>1:00 PM IST</span><span class="dot"></span><span>23 stories</span>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- CULTURE -->
+  <div class="section-head"><span class="ix">01</span><h2>Culture &amp; Trends</h2><span class="count">4</span><span class="rule"></span></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">01</span>
+    <span class="htext"><span class="kicker">IG format · Global</span><h3>The "let the comments vote" Reel is everywhere</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Instagram · format of the week</span></div></div>
+      <p>The dominant format is the <strong>"Seeing if the Algorithm Prefers"</strong> post — a high-effort edit pitted against a deadpan static shot in one Reel, letting comments pick the winner. Two weeks deep and still climbing.</p>
+      <p>Alongside it: the <strong>"I Am Home"</strong> trend to MJ's "Beat It," and the <strong>"I Have Therapy"</strong> POV cut. Month's throughline — audio-driven formats, nostalgic confessionals, self-aware comedy.</p>
+      <a class="linkout" href="#" onclick="return false">open trend roundup in Instagram</a>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">02</span>
+    <span class="htext"><span class="kicker">IG format · India</span><h3>India's lane: understood in the first second</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>India · Reels</span></div></div>
+      <p>Indian Reels lean on <strong>clarity and fast emotional payoff</strong> — funny POV formats and single-photo-into-movement transitions where the audio does the heavy lifting.</p>
+      <p>For your own work: India leads the world with <strong>~414M Reels users</strong>, so a format that catches here moves at enormous scale.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">03</span>
+    <span class="htext"><span class="kicker">Trending audio</span><h3>What's soundtracking the feed right now</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <ul class="mini">
+        <li><span><b>"Material Lover" + Madonna's "Vogue"</b> — pulled back by Devil Wears Prada 2 &amp; the Met Gala</span></li>
+        <li><span><b>JENNIE × Tame Impala "Dracula"</b> — the two-person walk trend, 300K+ Reels</span></li>
+        <li><span><b>Justin Bieber "EVERYTHING HALLELUJAH"</b> — dominating brand listing Reels</span></li>
+        <li><span><b>"Gozalo (Slowed)" — ariismusic</b> — India's beat-drop transition sound</span></li>
+      </ul>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">04</span>
+    <span class="htext"><span class="kicker">Twitter · Global + India</span><h3>Sport, politics, and a Siri leak share the board</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>X / Twitter · trending board</span></div></div>
+      <p>Today's board mixed sport (Jannik Sinner, F1 Barcelona GP, a UFC result), politics ("No Kings" protests, US trends), and tech (iOS 27 Siri features leaking). X trends now weigh <strong>rate of growth</strong>, not just volume.</p>
+      <p class="caveat">⚠ Reported by trend trackers, not a live platform pull — X restricts its data, so this runs slightly behind real-time.</p>
+    </div></div></div>
+
+  <!-- CAMERAS -->
+  <div class="section-head"><span class="ix">02</span><h2>Cameras &amp; Gear</h2><span class="count">5</span><span class="rule"></span></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">05</span>
+    <span class="htext"><span class="kicker">Canon · launched</span><h3>Canon EOS R6 V arrives as a second "FX3-killer"</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Canon EOS R6 V</span></div></div>
+      <p>Canon's new R6 V leans hard into hybrid/video, positioned to challenge Sony's FX3 for run-and-gun shooters. For your S-Log/grading workflow, the relevant thread is Canon's increasingly video-aware RF roadmap — hybrid zooms designed to cut focus breathing and smooth aperture transitions.</p>
+      <button class="watch" onclick="togglePlay(this,'v05')"><span class="tri"></span> Watch the hands-on <span class="dur">8:42</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">06</span>
+    <span class="htext"><span class="kicker">Panasonic · launched</span><h3>Panasonic Lumix L10 shakes up the compact class</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Panasonic Lumix L10</span></div></div>
+      <p>Panasonic dropped a compact L10 that's drawing attention in the small-camera category — an interesting one if you want a pocketable B-cam that still plays nicely in an L-mount/grading pipeline.</p>
+      <button class="watch" onclick="togglePlay(this,'v06')"><span class="tri"></span> Watch the first look <span class="dur">6:15</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">07</span>
+    <span class="htext"><span class="kicker">Fujifilm · launched</span><h3>Fujifilm's "instant camcorder" — Instax Mini Evo Cinema</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Instax Mini Evo Cinema</span></div></div>
+      <p>Fujifilm launched a genuinely odd new category piece — an Instax that leans into a cine-flavored "instant camcorder" concept. More a creative toy than a workhorse, but exactly the kind of weird-tool you might enjoy for content.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">08</span>
+    <span class="htext"><span class="kicker">GoPro · launched</span><h3>GoPro debuts a Micro Four Thirds camera</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>GoPro · Micro Four Thirds</span></div></div>
+      <p>GoPro stepping into a real interchangeable-sensor format (M4/3) is a notable shift from the fixed-lens action-cam mold — worth watching if you want a small sensor-bumped rig for movement shots.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">09</span>
+    <span class="htext"><span class="kicker">Imminent · cleared regulatory</span><h3>Sony A7R VI &amp; Fujifilm X-T6 register — announcements near</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Sony A7R VI · Fujifilm X-T6</span></div></div>
+      <p>Both have cleared regulatory (CMIIT) registration alongside new Nikon Z and Panasonic bodies — the usual signal that announcements are weeks, not months, away. The A7R VI succeeds the long-running 61MP A7R V.</p>
+    </div></div></div>
+
+  <!-- GAMING -->
+  <div class="section-head"><span class="ix">03</span><h2>Gaming</h2><span class="count">5</span><span class="rule"></span></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">10</span>
+    <span class="htext"><span class="kicker">Release · Jun 16</span><h3>COPA CITY: manage the chaos, not the match</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>COPA CITY</span></div></div>
+      <p>A football game that shifts the focus off the pitch entirely — you run the massive logistical operation of staging a major sporting event. A novel angle in the management-sim genre.</p>
+      <button class="watch" onclick="togglePlay(this,'v10')"><span class="tri"></span> Watch the trailer <span class="dur">2:31</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">11</span>
+    <span class="htext"><span class="kicker">Release · anniversary</span><h3>Dead or Alive: Last Round — 30th-anniversary edition</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Dead or Alive: Last Round</span></div></div>
+      <p>The fighting franchise turns 30 with an optimized re-release: a ~30-fighter roster and a new photo mode, modernized for current systems. A celebration piece for series veterans.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">12</span>
+    <span class="htext"><span class="kicker">Release · Square Enix</span><h3>The Adventures of Elliot — another HD-2D entry</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>The Adventures of Elliot: The Millennium Tales</span></div></div>
+      <p>Square Enix continues its gorgeous HD-2D catalog (Octopath, Triangle Strategy lineage) with another entry in the style — worth a look if that pixel-meets-3D aesthetic appeals to your visual taste.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">13</span>
+    <span class="htext"><span class="kicker">Hardware · leak</span><h3>Nvidia RTX 50 SUPER lineup leaks in full</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Nvidia RTX 50 SUPER</span></div></div>
+      <p>A major specifications leak detailed the refreshed RTX 50 SUPER cards. Relevant beyond gaming for you — GPU horsepower is exactly what accelerates DaVinci Resolve renders and DCTL-heavy grading.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">14</span>
+    <span class="htext"><span class="kicker">Port · Switch 2</span><h3>FF7 Rebirth finally lands on Switch 2</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Final Fantasy VII Rebirth · Switch 2</span></div></div>
+      <p>The acclaimed FF7 Rebirth comes to Switch 2 this month — notable for what it says about the new hardware's ceiling. (Year-ahead reminder: GTA 6 still set for a November console launch.)</p>
+    </div></div></div>
+
+  <!-- CINEMA -->
+  <div class="section-head"><span class="ix">04</span><h2>Cinema</h2><span class="count">5</span><span class="rule"></span></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">15</span>
+    <span class="htext"><span class="kicker">Global · box office</span><h3>Spielberg's Disclosure Day breaks an unwritten rule</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Disclosure Day</span></div></div>
+      <p><strong>Disclosure Day</strong> scored the biggest opening for an <em>original</em> Spielberg film — a sci-fi UFO ensemble (Emily Blunt, Josh O'Connor, Colin Firth), beating the assumption that non-franchise originals can't open big.</p>
+      <button class="watch" onclick="togglePlay(this,'v15')"><span class="tri"></span> Watch the trailer <span class="dur">2:18</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">16</span>
+    <span class="htext"><span class="kicker">Global · critics' pick</span><h3>Pixar's Hoppers is the one critics love</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Hoppers · Pixar</span></div></div>
+      <p>Pixar's <strong>Hoppers</strong> took $372M worldwide with strong reviews — a needed critical win ahead of Toy Story 5. Variety called it top-drawer Pixar. Worth it if you want craft to study, not just a watch.</p>
+      <button class="watch" onclick="togglePlay(this,'v16')"><span class="tri"></span> Watch the trailer <span class="dur">2:05</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">17</span>
+    <span class="htext"><span class="kicker">Global · this week</span><h3>Toy Story 5 opens June 19</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Toy Story 5</span></div></div>
+      <p>Predicted to top June's box office (~$440M domestic). The premise leans poignant — the toys face kids replacing them with gadgets. A controversial new Woody redesign (a bald spot) has fans talking.</p>
+      <button class="watch" onclick="togglePlay(this,'v17')"><span class="tri"></span> Watch the trailer <span class="dur">2:40</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">18</span>
+    <span class="htext"><span class="kicker">India · box office leader</span><h3>Peddi (Telugu) is the runaway hit — ₹220 Cr</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Peddi · Telugu</span></div></div>
+      <p>Telugu cinema is carrying India's box office — a 63% share of the last 30 days' collections, led by <strong>Peddi</strong> at ₹220 Cr net. The clearest signal of where the commercial energy is right now.</p>
+      <button class="watch" onclick="togglePlay(this,'v18')"><span class="tri"></span> Watch the trailer <span class="dur">3:04</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">19</span>
+    <span class="htext"><span class="kicker">India · mixed results</span><h3>Hindi's June: one modest win, one soft horror opening</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Bollywood · June 2026</span></div></div>
+      <p>Hindi results are uneven: <em>Hai Jawani Toh Ishq Hona Hai</em> managed ₹46 Cr, while horror release <em>Haunted 3D: Echoes of the Past</em> opened soft near ₹12 Cr. Per IMDb tracking, the big swings — Ramayana Part 1, Toxic, Spirit — are still ahead this year.</p>
+    </div></div></div>
+
+  <!-- RABBITHOLE -->
+  <div class="section-head"><span class="ix">05</span><h2>Rabbithole</h2><span class="count">1</span><span class="rule"></span></div>
+
+  <div class="story deep"><button class="headline" onclick="toggle(this)"><span class="num">20</span>
+    <span class="htext"><span class="kicker">The deep dive · ~3 min</span><h3>The animal that cheats death</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner"><div class="skin">
+      <div class="media"><div class="fallback"><span>Turritopsis dohrnii — the immortal jellyfish</span></div></div>
+      <p>There's a jellyfish the size of your pinky nail that is, in a real biological sense, <strong>immortal</strong>. When <em>Turritopsis dohrnii</em> is injured, starving, or just old, it reverts to its juvenile polyp form, rewinding its own clock and starting over. Unless something eats it, it can do this indefinitely.</p>
+      <p>The mechanism breaks a rule you were taught. Most animal cells are locked in. This jellyfish performs <strong>transdifferentiation</strong>: specialized adult cells un-specialize, then re-specialize into entirely different types. Picture a butterfly that could turn <em>itself</em> back into a caterpillar.</p>
+      <p>Why it matters: this is the exact cellular reprogramming cancer and regenerative-medicine labs chase — convincing specialized cells to change identity on command is the holy grail behind regrowing a damaged heart. This jellyfish does it natively.</p>
+      <p>The catch: "immortal" only means it doesn't die of <em>aging</em>. In the ocean, most get eaten as plankton long before they use their reset. Less "unkillable," more "has no expiry date."</p>
+      <button class="watch" onclick="togglePlay(this,'v20')"><span class="tri"></span> Watch the explainer <span class="dur">6:10</span></button>
+      <div class="player"></div>
+    </div></div></div></div>
+
+  <!-- PSYCHOLOGY -->
+  <div class="section-head"><span class="ix">06</span><h2>Psychology</h2><span class="count">2</span><span class="rule"></span></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">21</span>
+    <span class="htext"><span class="kicker">Interesting · the mind</span><h3>You narrate your choices after you've made them</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Choice blindness &amp; the confabulating brain</span></div></div>
+      <p>A lot of what feels like <em>deciding</em> is actually <strong>explaining a decision your brain already made</strong>. In "choice blindness" experiments, people pick a face, are secretly handed back the one they <em>didn't</em> pick, and then confidently explain why they chose it — defending a preference that was never theirs.</p>
+      <p>The split-brain version is starker: the verbal half of the brain invents sincere reasons for actions the other half took. The takeaway isn't "you're broken" — it's that <strong>certainty about your own motives is itself a story your mind tells</strong>. Worth holding lightly next time you're sure why you did something.</p>
+      <p class="caveat">Well-replicated across choice-blindness and split-brain literatures.</p>
+    </div></div></div>
+
+  <div class="story"><button class="headline" onclick="toggle(this)"><span class="num">22</span>
+    <span class="htext"><span class="kicker">Useful · apply today</span><h3>Stop relying on willpower. Use "if–then" instead</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner">
+      <div class="media"><div class="fallback"><span>Implementation intentions</span></div></div>
+      <p>One of the most robust behavior-change findings, and almost embarrassingly simple. "I'll edit more" fails because the <em>when/where</em> is undecided, so you decide in the moment — tired, feed right there. <strong>Implementation intentions</strong> fix it in advance: <em>"If it's 9am and I've had coffee, then I open the Resolve timeline before anything else."</em></p>
+      <p>The mechanism: you pre-load the trigger so the situation cues the action, instead of summoning willpower each time. For your procrastination, the move is to <strong>name the cue, not the intention</strong> — tie the task to something that already happens in your day.</p>
+      <p class="caveat">Gollwitzer's implementation intentions — large evidence base, strong real-world effects.</p>
+      <button class="watch" onclick="togglePlay(this,'v22')"><span class="tri"></span> Watch the explainer <span class="dur">5:28</span></button>
+      <div class="player"></div>
+    </div></div></div>
+
+  <!-- PHILOSOPHY -->
+  <div class="section-head"><span class="ix">07</span><h2>Philosophy</h2><span class="count">1</span><span class="rule"></span></div>
+
+  <div class="story deep"><button class="headline" onclick="toggle(this)"><span class="num">23</span>
+    <span class="htext"><span class="kicker">The question · sit with it</span><h3>The teleporter kills you. Does anyone notice?</h3></span><span class="chev"></span></button>
+    <div class="detail"><div class="detail-inner"><div class="skin">
+      <div class="media"><div class="fallback"><span>Parfit's teleporter &amp; personal identity</span></div></div>
+      <p>Derek Parfit's setup: a teleporter scans every atom of you, destroys the original, and builds a perfect copy on Mars from new matter — same memories, same scar. The copy wakes sure it's you and lives your life. <strong>Did you travel to Mars, or die in the scanner while a stranger with your memories took over?</strong></p>
+      <p>It sharpens fast. Suppose the machine <em>doesn't</em> destroy the original — now there are two of you, and they can't both be you. Yet the Mars copy is exactly as continuous with your past as it was a second ago. So whatever makes "you" you, it isn't the thing you instinctively reach for.</p>
+      <p>Parfit's radical move: maybe the question <strong>has no answer because it was never a real fact</strong>. What matters is psychological continuity — and once you've described that fully, there's no <em>further</em> fact about whether the future person "is really you." Identity is a label over a process, not the deep thing.</p>
+      <p>Why it's not abstract: you're <em>already</em> in a slow teleporter. Your atoms mostly weren't there years ago; you're tied to your ten-year-old self only by an unbroken chain of overlapping memory and matter — the same kind of chain the machine provides. If that's enough across decades, why not across the scanner? The thing you fear about the teleporter might be quietly true of ordinary life.</p>
+      <button class="watch" onclick="togglePlay(this,'v23')"><span class="tri"></span> Watch the explainer <span class="dur">7:44</span></button>
+      <div class="player"></div>
+    </div></div></div></div>
+
+</main>
+
+<footer class="ending">
+  <div class="mark">✦</div>
+  <h4>That's everything.</h4>
+  <p>You've read today's edition. Nothing more is loading. Go make something with your day.</p>
+  <div class="next">Next edition · tomorrow · 1:00 PM</div>
+</footer>
+
+<script>
+  function toggle(btn){
+    var story=btn.closest('.story');
+    var isOpen=story.classList.contains('open');
+    document.querySelectorAll('.story.open').forEach(function(s){if(s!==story){s.classList.remove('open');closePlayers(s);}});
+    if(isOpen){story.classList.remove('open');closePlayers(story);}else{story.classList.add('open');}
+  }
+  function closePlayers(scope){scope.querySelectorAll('.player.open').forEach(function(p){p.classList.remove('open');p.innerHTML='';});}
+  var YT={};
+  function togglePlay(btn,id){
+    var player=btn.nextElementSibling;
+    var isOpen=player.classList.contains('open');
+    document.querySelectorAll('.player.open').forEach(function(p){if(p!==player){p.classList.remove('open');p.innerHTML='';}});
+    if(isOpen){player.classList.remove('open');player.innerHTML='';return;}
+    var ytid=YT[id];
+    if(ytid){player.innerHTML='<iframe src="https://www.youtube.com/embed/'+ytid+'?rel=0" title="video" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>';}
+    else{player.innerHTML='<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#1F1B16;color:#C9BEAC;font-family:\'Fraunces\',serif;font-style:italic;font-size:14px;text-align:center;padding:20px">Video plays here in the live app —<br>the real YouTube clip loads on tap.</div>';}
+    player.classList.add('open');
+  }
+  document.querySelectorAll('.media img').forEach(function(img){img.addEventListener('error',function(){img.style.display='none';});});
+</script>
+</body>
+</html>

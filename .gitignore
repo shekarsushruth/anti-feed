@@ -1,0 +1,11 @@
+# personal planning doc — not for the public repo
+anti-feed-build-brief.md
+
+# local drafts the agent may write before finalizing
+draft.json
+*.draft.json
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+node_modules/

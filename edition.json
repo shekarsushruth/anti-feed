@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "date_label": "THU · 18 JUN 2026",
+    "time_label": "1:00 PM IST",
+    "story_count": 23,
+    "generated_at": "2026-06-18T11:52:20+05:30"
+  },
+  "sections": [
+    {
+      "index": "01",
+      "title": "Culture & Trends",
+      "stories": [
+        {
+          "kicker": "IG format · Global",
+          "headline": "The \"let the comments vote\" Reel is everywhere",
+          "media_label": "Instagram · format of the week",
+          "body": [
+            "The dominant format is the <strong>\"Seeing if the Algorithm Prefers\"</strong> post — a high-effort edit pitted against a deadpan static shot in one Reel, letting comments pick the winner. Two weeks deep and still climbing.",
+            "Alongside it: the <strong>\"I Am Home\"</strong> trend to MJ's \"Beat It,\" and the <strong>\"I Have Therapy\"</strong> POV cut. Month's throughline — audio-driven formats, nostalgic confessionals, self-aware comedy."
+          ],
+          "linkout": {
+            "label": "open trend roundup in Instagram",
+            "url": "#"
+          }
+        },
+        {
+          "kicker": "IG format · India",
+          "headline": "India's lane: understood in the first second",
+          "media_label": "India · Reels",
+          "body": [
+            "Indian Reels lean on <strong>clarity and fast emotional payoff</strong> — funny POV formats and single-photo-into-movement transitions where the audio does the heavy lifting.",
+            "For your own work: India leads the world with <strong>~414M Reels users</strong>, so a format that catches here moves at enormous scale."
+          ]
+        },
+        {
+          "kicker": "Trending audio",
+          "headline": "What's soundtracking the feed right now",
+          "mini": [
+            "<b>\"Material Lover\" + Madonna's \"Vogue\"</b> — pulled back by Devil Wears Prada 2 &amp; the Met Gala",
+            "<b>JENNIE × Tame Impala \"Dracula\"</b> — the two-person walk trend, 300K+ Reels",
+            "<b>Justin Bieber \"EVERYTHING HALLELUJAH\"</b> — dominating brand listing Reels",
+            "<b>\"Gozalo (Slowed)\" — ariismusic</b> — India's beat-drop transition sound"
+          ]
+        },
+        {
+          "kicker": "Twitter · Global + India",
+          "headline": "Sport, politics, and a Siri leak share the board",
+          "media_label": "X / Twitter · trending board",
+          "body": [
+            "Today's board mixed sport (Jannik Sinner, F1 Barcelona GP, a UFC result), politics (\"No Kings\" protests, US trends), and tech (iOS 27 Siri features leaking). X trends now weigh <strong>rate of growth</strong>, not just volume."
+          ],
+          "caveat": "⚠ Reported by trend trackers, not a live platform pull — X restricts its data, so this runs slightly behind real-time."
+        }
+      ]
+    },
+    {
+      "index": "02",
+      "title": "Cameras & Gear",
+      "stories": [
+        {
+          "kicker": "Canon · launched",
+          "headline": "Canon EOS R6 V arrives as a second \"FX3-killer\"",
+          "media_label": "Canon EOS R6 V",
+          "body": [
+            "Canon's new R6 V leans hard into hybrid/video, positioned to challenge Sony's FX3 for run-and-gun shooters. For your S-Log/grading workflow, the relevant thread is Canon's increasingly video-aware RF roadmap — hybrid zooms designed to cut focus breathing and smooth aperture transitions."
+          ],
+          "video": {
+            "id": "",
+            "label": "Watch the hands-on",
+            "duration": "8:42"
+          }
+        },
+        {
+          "kicker": "Panasonic · launched",
+          "headline": "Panasonic Lumix L10 shakes up the compact class",
+          "media_label": "Panasonic Lumix L10",
+          "body": [
+            "Panasonic dropped a compact L10 that's drawing attention in the small-camera category — an interesting one if you want a pocketable B-cam that still plays nicely in an L-mount/grading pipeline."
+          ],
+          "video": {
+            "id": "",
+            "label": "Watch the first look",
+            "duration": "6:15"
+          }
+        },
+        {
+          "kicker": "Fujifilm · launched",
+          "headline": "Fujifilm's \"instant camcorder\" — Instax Mini Evo Cinema",
+          "media_label": "Instax Mini Evo Cinema",
+          "body": [
+            "Fujifilm launched a genuinely odd new category piece — an Instax that leans into a cine-flavored \"instant camcorder\" concept. More a creative toy than a workhorse, but exactly the kind of weird-tool you might enjoy for content."
+          ]
+        },
+        {
+          "kicker": "GoPro · launched",
+          "headline": "GoPro debuts a Micro Four Thirds camera",
+          "media_label": "GoPro · Micro Four Thirds",
+          "body": [
+            "GoPro stepping into a real interchangeable-sensor format (M4/3) is a notable shift from the fixed-lens action-cam mold — worth watching if you want a small sensor-bumped rig for movement shots."
+          ]
+        },
+        {
+          "kicker": "Imminent · cleared regulatory",
+          "headline": "Sony A7R VI & Fujifilm X-T6 register — announcements near",
+          "media_label": "Sony A7R VI · Fujifilm X-T6",
+          "body": [
+            "Both have cleared regulatory (CMIIT) registration alongside new Nikon Z and Panasonic bodies — the usual signal that announcements are weeks, not months, away. The A7R VI succeeds the long-running 61MP A7R V."
+          ]
+        }
+      ]
+    },
+    {
+      "index": "03",
+      "title": "Gaming",
+      "stories": [
+        {
+          "kicker": "Release · Jun 16",
+          "headline": "COPA CITY: manage the chaos, not the match",
+          "media_label": "COPA CITY",
+          "body": [
+            "A football game that shifts the focus off the pitch entirely — you run the massive logistical operation of staging a major sporting event. A novel angle in the management-sim genre."
+          ],
+          "video": {
+            "id": "vDnKiRweH0U",
+            "label": "Watch the trailer",
+            "duration": "1:55"
+          }
+        },
+        {
+          "kicker": "Release · anniversary",
+          "headline": "Dead or Alive: Last Round — 30th-anniversary edition",
+          "media_label": "Dead or Alive: Last Round",
+          "body": [
+            "The fighting franchise turns 30 with an optimized re-release: a ~30-fighter roster and a new photo mode, modernized for current systems. A celebration piece for series veterans."
+          ]
+        },
+        {
+          "kicker": "Release · Square Enix",
+          "headline": "The Adventures of Elliot — another HD-2D entry",
+          "media_label": "The Adventures of Elliot: The Millennium Tales",
+          "body": [
+            "Square Enix continues its gorgeous HD-2D catalog (Octopath, Triangle Strategy lineage) with another entry in the style — worth a look if that pixel-meets-3D aesthetic appeals to your visual taste."
+          ]
+        },
+        {
+          "kicker": "Hardware · leak",
+          "headline": "Nvidia RTX 50 SUPER lineup leaks in full",
+          "media_label": "Nvidia RTX 50 SUPER",
+          "body": [
+            "A major specifications leak detailed the refreshed RTX 50 SUPER cards. Relevant beyond gaming for you — GPU horsepower is exactly what accelerates DaVinci Resolve renders and DCTL-heavy grading."
+          ]
+        },
+        {
+          "kicker": "Port · Switch 2",
+          "headline": "FF7 Rebirth finally lands on Switch 2",
+          "media_label": "Final Fantasy VII Rebirth · Switch 2",
+          "body": [
+            "The acclaimed FF7 Rebirth comes to Switch 2 this month — notable for what it says about the new hardware's ceiling. (Year-ahead reminder: GTA 6 still set for a November console launch.)"
+          ]
+        }
+      ]
+    },
+    {
+      "index": "04",
+      "title": "Cinema",
+      "stories": [
+        {
+          "kicker": "Global · box office",
+          "headline": "Spielberg's Disclosure Day breaks an unwritten rule",
+          "media_label": "Disclosure Day",
+          "body": [
+            "<strong>Disclosure Day</strong> scored the biggest opening for an <em>original</em> Spielberg film — a sci-fi UFO ensemble (Emily Blunt, Josh O'Connor, Colin Firth), beating the assumption that non-franchise originals can't open big."
+          ],
+          "video": {
+            "id": "",
+            "label": "Watch the trailer",
+            "duration": "2:18"
+          }
+        },
+        {
+          "kicker": "Global · critics' pick",
+          "headline": "Pixar's Hoppers is the one critics love",
+          "media_label": "Hoppers · Pixar",
+          "body": [
+            "Pixar's <strong>Hoppers</strong> took $372M worldwide with strong reviews — a needed critical win ahead of Toy Story 5. Variety called it top-drawer Pixar. Worth it if you want craft to study, not just a watch."
+          ],
+          "video": {
+            "id": "YjvMBEpe1Pc",
+            "label": "Watch the trailer",
+            "duration": "2:30"
+          }
+        },
+        {
+          "kicker": "Global · this week",
+          "headline": "Toy Story 5 opens June 19",
+          "media_label": "Toy Story 5",
+          "body": [
+            "Predicted to top June's box office (~$440M domestic). The premise leans poignant — the toys face kids replacing them with gadgets. A controversial new Woody redesign (a bald spot) has fans talking."
+          ],
+          "video": {
+            "id": "NBS_FvKOl1Y",
+            "label": "Watch the trailer",
+            "duration": "0:50"
+          }
+        },
+        {
+          "kicker": "India · box office leader",
+          "headline": "Peddi (Telugu) is the runaway hit — ₹220 Cr",
+          "media_label": "Peddi · Telugu",
+          "body": [
+            "Telugu cinema is carrying India's box office — a 63% share of the last 30 days' collections, led by <strong>Peddi</strong> at ₹220 Cr net. The clearest signal of where the commercial energy is right now."
+          ],
+          "video": {
+            "id": "sF2dj7ycZvA",
+            "label": "Watch the trailer",
+            "duration": "3:07"
+          }
+        },
+        {
+          "kicker": "India · mixed results",
+          "headline": "Hindi's June: one modest win, one soft horror opening",
+          "media_label": "Bollywood · June 2026",
+          "body": [
+            "Hindi results are uneven: <em>Hai Jawani Toh Ishq Hona Hai</em> managed ₹46 Cr, while horror release <em>Haunted 3D: Echoes of the Past</em> opened soft near ₹12 Cr. Per IMDb tracking, the big swings — Ramayana Part 1, Toxic, Spirit — are still ahead this year."
+          ]
+        }
+      ]
+    },
+    {
+      "index": "05",
+      "title": "Rabbithole",
+      "stories": [
+        {
+          "kicker": "The deep dive · ~3 min",
+          "headline": "The animal that cheats death",
+          "deep": true,
+          "media_label": "Turritopsis dohrnii — the immortal jellyfish",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Turritopsisdohrnii.jpeg/1280px-Turritopsisdohrnii.jpeg",
+          "body": [
+            "There's a jellyfish the size of your pinky nail that is, in a real biological sense, <strong>immortal</strong>. When <em>Turritopsis dohrnii</em> is injured, starving, or just old, it reverts to its juvenile polyp form, rewinding its own clock and starting over. Unless something eats it, it can do this indefinitely.",
+            "The mechanism breaks a rule you were taught. Most animal cells are locked in. This jellyfish performs <strong>transdifferentiation</strong>: specialized adult cells un-specialize, then re-specialize into entirely different types. Picture a butterfly that could turn <em>itself</em> back into a caterpillar.",
+            "Why it matters: this is the exact cellular reprogramming cancer and regenerative-medicine labs chase — convincing specialized cells to change identity on command is the holy grail behind regrowing a damaged heart. This jellyfish does it natively.",
+            "The catch: \"immortal\" only means it doesn't die of <em>aging</em>. In the ocean, most get eaten as plankton long before they use their reset. Less \"unkillable,\" more \"has no expiry date.\""
+          ],
+          "video": {
+            "id": "2kLSiE-eNjw",
+            "label": "Watch the explainer",
+            "duration": "4:30"
+          }
+        }
+      ]
+    },
+    {
+      "index": "06",
+      "title": "Psychology",
+      "stories": [
+        {
+          "kicker": "Interesting · the mind",
+          "headline": "You narrate your choices after you've made them",
+          "media_label": "Choice blindness & the confabulating brain",
+          "body": [
+            "A lot of what feels like <em>deciding</em> is actually <strong>explaining a decision your brain already made</strong>. In \"choice blindness\" experiments, people pick a face, are secretly handed back the one they <em>didn't</em> pick, and then confidently explain why they chose it — defending a preference that was never theirs.",
+            "The split-brain version is starker: the verbal half of the brain invents sincere reasons for actions the other half took. The takeaway isn't \"you're broken\" — it's that <strong>certainty about your own motives is itself a story your mind tells</strong>. Worth holding lightly next time you're sure why you did something."
+          ],
+          "caveat": "Well-replicated across choice-blindness and split-brain literatures."
+        },
+        {
+          "kicker": "Useful · apply today",
+          "headline": "Stop relying on willpower. Use \"if–then\" instead",
+          "media_label": "Implementation intentions",
+          "body": [
+            "One of the most robust behavior-change findings, and almost embarrassingly simple. \"I'll edit more\" fails because the <em>when/where</em> is undecided, so you decide in the moment — tired, feed right there. <strong>Implementation intentions</strong> fix it in advance: <em>\"If it's 9am and I've had coffee, then I open the Resolve timeline before anything else.\"</em>",
+            "The mechanism: you pre-load the trigger so the situation cues the action, instead of summoning willpower each time. For your procrastination, the move is to <strong>name the cue, not the intention</strong> — tie the task to something that already happens in your day."
+          ],
+          "caveat": "Gollwitzer's implementation intentions — large evidence base, strong real-world effects.",
+          "video": {
+            "id": "RWvUl-aovqE",
+            "label": "Watch the explainer",
+            "duration": "5:25"
+          }
+        }
+      ]
+    },
+    {
+      "index": "07",
+      "title": "Philosophy",
+      "stories": [
+        {
+          "kicker": "The question · sit with it",
+          "headline": "The teleporter kills you. Does anyone notice?",
+          "deep": true,
+          "media_label": "Parfit's teleporter & personal identity",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Derek_Parfit_at_Harvard-April_21%2C_2015-Effective_Altruism.jpg/1280px-Derek_Parfit_at_Harvard-April_21%2C_2015-Effective_Altruism.jpg",
+          "body": [
+            "Derek Parfit's setup: a teleporter scans every atom of you, destroys the original, and builds a perfect copy on Mars from new matter — same memories, same scar. The copy wakes sure it's you and lives your life. <strong>Did you travel to Mars, or die in the scanner while a stranger with your memories took over?</strong>",
+            "It sharpens fast. Suppose the machine <em>doesn't</em> destroy the original — now there are two of you, and they can't both be you. Yet the Mars copy is exactly as continuous with your past as it was a second ago. So whatever makes \"you\" you, it isn't the thing you instinctively reach for.",
+            "Parfit's radical move: maybe the question <strong>has no answer because it was never a real fact</strong>. What matters is psychological continuity — and once you've described that fully, there's no <em>further</em> fact about whether the future person \"is really you.\" Identity is a label over a process, not the deep thing.",
+            "Why it's not abstract: you're <em>already</em> in a slow teleporter. Your atoms mostly weren't there years ago; you're tied to your ten-year-old self only by an unbroken chain of overlapping memory and matter — the same kind of chain the machine provides. If that's enough across decades, why not across the scanner? The thing you fear about the teleporter might be quietly true of ordinary life."
+          ],
+          "video": {
+            "id": "Bbp_e9UT2mk",
+            "label": "Watch the explainer",
+            "duration": "11:58"
+          }
+        }
+      ]
+    }
+  ]
+}
