@@ -59,26 +59,42 @@ here" note rather than inventing filler.
      fallback). This covers the cards with no free image (cameras, games, films).
   3. **Neither** (abstract topics, trends, most psychology/philosophy concept cards, or no
      free image found) → omit `image` entirely. The card renders clean, text-only.
-- **Video = tap-to-play, never autoplay.** One per story max, only where it adds info
-  (trailer, review, explainer). Supply a real YouTube **video id** (the 11-char id,
-  not a URL) in `video.id`. Leave `id` empty only if you couldn't find a good one —
-  the button then shows the placeholder.
+- **Video research is MANDATORY on every run — not optional, and not inheritable.**
+  For **every** story in Cameras, Gaming, Cinema, Rabbithole, Psychology, and
+  Philosophy you MUST, *this run*, actually search YouTube for the most relevant
+  trailer / hands-on / review / explainer and **verify the id resolves** before using
+  it (oEmbed: `https://www.youtube.com/oembed?format=json&url=https://www.youtube.com/watch?v=ID`;
+  a 200 with a `title` = good). Never carry over an id from a previous edition without
+  re-finding and re-verifying it. Tap-to-play only, never autoplay, one per story max.
+  Put the verified 11-char id in `video.id`. If after a genuine search no good video
+  exists for a story, leave its `video` off — but the category must still hit its
+  minimum coverage (below), so "skipped the search" is not an option.
+- **This is enforced.** `verify_media.mjs` runs before every publish: it oEmbed-checks
+  every `video.id` and requires minimum verified-video coverage per category
+  (Cameras/Gaming/Rabbithole/Psychology/Philosophy ≥1, Cinema ≥2; Culture exempt).
+  A research-skipped edition **fails the gate and cannot go live.** Culture & Trends is
+  the only exempt category because IG/X content can't embed.
 - **Instagram Reels / Twitter posts can't embed** — use `linkout` to the source instead.
 - **Trend caveat:** IG/Twitter data comes from third-party trackers and runs a few
   days behind. Keep the small `caveat` line on those cards. Don't pretend it's live.
 
-## Step 4 — Write the draft JSON, then finalize
+## Step 4 — Write the draft JSON, finalize, verify, then publish
 
-Write the stories into `edition.json` (or a `draft.json`) using the schema below,
-then run the finalizer, which validates the rules above and stamps the date/time/count:
+Write the stories into `edition.json` (or a `draft.json`), then:
 
 ```
-node build_edition.mjs            # finalize edition.json in place
-# or:  node build_edition.mjs --from draft.json --out edition.json
+node build_edition.mjs            # 1. validate structure/caps + stamp + write edition.json (+ edition.js)
+node verify_media.mjs             # 2. MEDIA GATE: oEmbed-verify every video.id + per-category coverage
+# 3. publish (deliberate opt-in required — see README):
+$env:ANTIFEED_PUBLISH = "1"; powershell -ExecutionPolicy Bypass -File publish.ps1
 ```
 
-If validation fails it prints errors and writes nothing — fix and re-run.
-Then publish (see README).
+- `build_edition.mjs` writes nothing if structure/caps validation fails — fix and re-run.
+- `verify_media.mjs` exits non-zero if any video is dead or a category is under its
+  minimum — **fix the video research and re-run.** `publish.ps1` runs this gate itself
+  and aborts on failure, so a research-skipped edition can never reach the live site.
+- `publish.ps1` is **frozen by default** and only pushes when `ANTIFEED_PUBLISH=1` is set
+  for that run — so nothing auto-publishes unless a real schedule deliberately opts in.
 
 ---
 

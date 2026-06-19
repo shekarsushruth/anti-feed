@@ -30,6 +30,14 @@ if (-not (Test-Path ".git")) {
     exit 1
 }
 
+# --- MEDIA GATE: force real video research ---
+# Blocks publishing a research-skipped edition (missing/dead videos). See verify_media.mjs.
+node verify_media.mjs
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Media verification failed -- publish aborted. Do the per-story video hunt (PIPELINE.md) and retry."
+    exit 1
+}
+
 # --- resolve the push token: env var first, then .env ---
 $token = $env:GITHUB_TOKEN
 if (-not $token -and (Test-Path ".env")) {
